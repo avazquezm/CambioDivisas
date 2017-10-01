@@ -19,13 +19,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         btn_convert = (Button) findViewById(R.id.btn_convert);
-        euros = (EditText) findViewById(R.id.Euro);
-        dollars = (EditText) findViewById(R.id.dollar);
-
+        euros = (EditText) findViewById(R.id.et_euros);
+        dollars = (EditText) findViewById(R.id.et_dollars);
         btn_convert.setOnClickListener(v -> doConversion());
-
-//        double d = Double.parseDouble(euros.getText().toString()) * 1.17623;
-//        btn_convert.setOnClickListener(view -> dollars.setText((int) d));
 
     }
 
@@ -33,5 +29,6 @@ public class MainActivity extends AppCompatActivity {
         double valor_euros = Double.parseDouble(euros.getText().toString());
         double valor_dollars = valor_euros * 1.17;
         dollars.setText(String.valueOf(valor_dollars));
+        //dollars.setText("4");
     }
 }
